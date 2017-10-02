@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.Revisao"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="234dp">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/appCompatCheckBox"
+                android:layout_width="77dp"
+                android:layout_height="22dp"
+                android:layout_alignEnd="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:layout_marginEnd="118dp"
+                android:layout_marginTop="127dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="111dp"
+
+                android:layout_alignBottom="@+id/appCompatCheckBox"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="38dp"
+                android:hint="blablabla"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="141dp"
+                android:layout_height="32dp"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="19dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Data:"
+                android:textSize="20dp"
+                app:layout_constraintHorizontal_bias="0.678"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="73dp"
+                android:layout_height="33dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="31dp"
+                android:layout_marginLeft="74dp"
+                android:layout_marginTop="12dp"
+                android:layout_toStartOf="@+id/appCompatCheckBox"
+                android:hint="Title"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.161" />
+        </RelativeLayout>
+
+    </FrameLayout>
