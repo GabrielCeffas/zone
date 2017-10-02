@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_calendar"
+            android:title="Calendário" />
+        <item
+            android:id="@+id/nav_revis"
+            android:icon="@drawable/ic_revis"
+            android:title="Revisão" />
+    </group>
+
+    <item android:title="">
+        <group android:checkableBehavior="all">
+        <menu>
+            <item
+                android:id="@+id/nav_config"
+                android:title="Configurações" />
+            <item
+                android:id="@+id/nav_about"
+                android:title="Sobre" />
+        </menu>
+        </group>
+    </item>
+
+</menu>
