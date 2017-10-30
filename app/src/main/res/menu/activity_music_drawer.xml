@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/one" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Inicio" />
+    </group>
+
+    <group android:id="@+id/two" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Calendario" />
+    </group>
+
+    <group android:id="@+id/three" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_revisao"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Revisao" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_config"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Config" />
+            <item
+                android:id="@+id/nav_sobre"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Sobre" />
+        </menu>
+    </item>
+
+
+</menu>

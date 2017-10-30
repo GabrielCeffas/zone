@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apresentação"
+        android:padding="@dimen/_13sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/colorBlack"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O Zone nada mais é que um aplicativo que utilizando como base o ZTD (Zen to Done), busca uma melhora na sua vida, tendo como seu foco a profutividade."
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/colorBlack"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contato"
+        android:padding="@dimen/_8sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/colorBlack"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  suporte@zone.com.br"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/colorBlack"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Versão"
+        android:padding="@dimen/_8sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/colorBlack"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  0.0.1"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/colorBlack"/>
+</LinearLayout>
