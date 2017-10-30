@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.androidmusicplayer.R;
 import br.com.zone.fragment.aboutFragment;
 import br.com.zone.fragment.novaTarefaFragment;
+import br.com.zone.fragment.configFragment;
 import br.com.zone.fragment.tabFragment;
 import br.com.zone.fragment.semanalFragment;
 
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity{
                 } else if (id == R.id.nav_revisao) {
                     fragment = new novaTarefaFragment();
                 } else if (id == R.id.nav_config) {
-
+                    fragment = new configFragment();
                 }else if (id == R.id.nav_sobre) {
                     fragment = new aboutFragment();
                 }
