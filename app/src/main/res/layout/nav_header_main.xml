@@ -18,7 +18,7 @@
         android:layout_height="@dimen/_100sdp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_8sdp"
-        android:src="@drawable/ic_action_name"
+        android:src="@drawable/zen"
         android:id="@+id/circleView"/>
 
     <TextView
@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/_8sdp"
         android:textSize="@dimen/_16sdp"
-        android:text="@string/adele_hello"
         android:layout_gravity="center"
         android:textColor="@color/colorWhite"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />

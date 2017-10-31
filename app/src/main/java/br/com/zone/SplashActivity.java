@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.androidmusicplayer.R;
+import br.com.zone.R;
 
 public class SplashActivity extends AppCompatActivity {
 

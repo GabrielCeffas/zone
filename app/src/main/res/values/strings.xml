@@ -37,4 +37,5 @@
     <string name="adele">Adele</string>
     <string name="your_playlists">Your Playlists</string>
     <string name="let_me_go">Let Me Go</string>
+    <string name="title_activity_test_activity">test_activity</string>
 </resources>

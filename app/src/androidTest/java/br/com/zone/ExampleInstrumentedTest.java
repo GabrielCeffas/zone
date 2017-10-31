@@ -1,4 +1,4 @@
-package br.com.androidmusicplayer;
+package br.com.zone;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

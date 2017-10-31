@@ -26,14 +26,12 @@
             android:id="@+id/play_list_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/let_me_go"
             android:textColor="@color/colorAccent"/>
 
         <TextView
             android:id="@+id/number_of_tracks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/let_me_go"
             android:textSize="@dimen/_10sdp"
             android:textColor="@color/colorAccent"/>
 

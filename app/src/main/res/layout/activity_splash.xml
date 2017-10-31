@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.androidmusicplayer.com.zone.SplashActivity">
+    tools:context="br.com.zone.SplashActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,9 +16,9 @@
         android:padding="16dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_name"
+            android:layout_width="128dp"
+            android:layout_height="197dp"
+            android:src="@drawable/zen"
             android:contentDescription="@string/app_name"/>
 
     </LinearLayout>

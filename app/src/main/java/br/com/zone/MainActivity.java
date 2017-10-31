@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.androidmusicplayer.R;
+import br.com.zone.R;
 import br.com.zone.fragment.aboutFragment;
 import br.com.zone.fragment.novaTarefaFragment;
 import br.com.zone.fragment.configFragment;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_music);
+        setContentView(R.layout.activity_main);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity{
         fragmentTransaction.commit();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        View header = navigationView.inflateHeaderView(R.layout.nav_header_music);
+        View header = navigationView.inflateHeaderView(R.layout.nav_header_main);
         TextView profileName = (TextView) header.findViewById(R.id.profile_name);
         profileName.setText("Zone");
 
@@ -82,8 +82,10 @@ public class MainActivity extends AppCompatActivity{
                 assert drawer != null;
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
+
             }
         });
+
     }
 
     @Override

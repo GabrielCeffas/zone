@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.androidmusicplayer.R;
+import br.com.zone.R;
 
 public class semanalFragment extends Fragment {
 
@@ -19,7 +19,7 @@ public class semanalFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_playlist, container, false);
+        View view = inflater.inflate(R.layout.fragment_semanal, container, false);
         GridLayoutManager gridLayout = new GridLayoutManager(getActivity(), 2);
 
 

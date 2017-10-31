@@ -1,15 +1,19 @@
 package br.com.zone.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.androidmusicplayer.R;
+import br.com.zone.R;
+
 import br.com.zone.adapter.SongAdapter;
 import br.com.zone.entities.SongObject;
 
@@ -23,16 +27,28 @@ public class diarioFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_song, container, false);
+        View view = inflater.inflate(R.layout.fragment_diario, container, false);
 
         getActivity().setTitle("Zone");
-        RecyclerView songRecyclerView = (RecyclerView)view.findViewById(R.id.song_list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        songRecyclerView.setLayoutManager(linearLayoutManager);
-        songRecyclerView.setHasFixedSize(true);
+
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int mStackLevel = 0;
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+                if (prev != null) {
+                    ft.remove(prev);
+                }
+                ft.addToBackStack(null);
+                DialogFragment newFragment = novaTarefaFragment.newInstance(mStackLevel);
+                newFragment.show(ft, "Adicionar Tarefa");
+            }
+        });
 
         SongAdapter mAdapter = new SongAdapter(getActivity(), getTestData());
-        songRecyclerView.setAdapter(mAdapter);
         return view;
     }
 

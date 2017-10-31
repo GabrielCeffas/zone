@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.androidmusicplayer.com.zone.fragment.tabFragment">
+    tools:context="br.com.zone.fragment.tabFragment">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabs"
-        android:padding="@dimen/_6sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:tabIndicatorHeight="6dp"
         android:background="@color/colorPrimary"/>
 
     <android.support.v4.view.ViewPager

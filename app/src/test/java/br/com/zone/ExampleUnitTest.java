@@ -1,4 +1,4 @@
-package br.com.androidmusicplayer;
+package br.com.zone;
 
 import org.junit.Test;
 

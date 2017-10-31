@@ -4,21 +4,21 @@
     <group android:id="@+id/one" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_inicio"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_home"
             android:title="Inicio" />
     </group>
 
     <group android:id="@+id/two" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_calendar"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_calendar"
             android:title="Calendario" />
     </group>
 
     <group android:id="@+id/three" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_revisao"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_revis"
             android:title="Revisao" />
     </group>
 
@@ -26,11 +26,11 @@
         <menu>
             <item
                 android:id="@+id/nav_config"
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@drawable/ic_menu_config"
                 android:title="Config" />
             <item
                 android:id="@+id/nav_sobre"
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@drawable/ic_menu_about"
                 android:title="Sobre" />
         </menu>
     </item>
