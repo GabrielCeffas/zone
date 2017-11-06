@@ -25,7 +25,7 @@
             android:layout_marginEnd="20dp" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/novaTarefa_favButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -41,7 +41,7 @@
             android:layout_marginEnd="20dp" />
 
         <TextView
-            android:id="@+id/editText"
+            android:id="@+id/novaTarefa_nome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -50,14 +50,14 @@
             android:ems="50"
             tools:textSize="18sp"
             android:text="@string/nome"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_favButton"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp" />
 
         <TextView
-            android:id="@+id/editText2"
+            android:id="@+id/novaTarefa_descri"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -66,7 +66,7 @@
             android:ems="50"
             tools:textSize="18sp"
             android:text="@string/conta"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_nome"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginStart="20dp"
@@ -82,7 +82,7 @@
             android:text="@string/notificacao"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_descri"
             tools:textSize="18sp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp" />

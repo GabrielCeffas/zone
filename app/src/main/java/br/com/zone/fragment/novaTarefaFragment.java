@@ -65,7 +65,7 @@ public class novaTarefaFragment extends DialogFragment {
 
         getActivity().setTitle("Zone");
         //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        Button dismiss = (Button) v.findViewById(R.id.cancel);
+        Button dismiss = (Button) v.findViewById(R.id.novaTarefa_cancelButton);
         dismiss.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v) {
