@@ -11,6 +11,11 @@
 
     <!-- Strings da tela Sobre -->
     <string name="apresentacao">Apresentação</string>
+    <string name="apresentacao_texto">O Zone nada mais é que um aplicativo que utilizando como base o ZTD (Zen to Done), busca uma melhora na sua vida, tendo como seu foco a profutividade.</string>
+    <string name="contato">Contato</string>
+    <string name="contato_texto">suporte@zone.com.br</string>
+    <string name="versao">Versão</string>
+    <string name="versao_texto">1.0</string>
 
     <string name="app_name">Zone</string>
     <string name="title_activity_music">Zone</string>
