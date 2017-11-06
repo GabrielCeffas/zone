@@ -8,8 +8,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import br.com.zone.R;
+
+import static android.R.attr.button;
 
 public class novaTarefaFragment extends DialogFragment {
     int mNum;
@@ -53,13 +57,27 @@ public class novaTarefaFragment extends DialogFragment {
         setStyle(style, theme);
     }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.novatarefa_activity, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.novatarefa_activity, container, false);
+        View tv = v.findViewById(R.id.text);
+
 
         getActivity().setTitle("Zone");
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        Button dismiss = (Button) v.findViewById(R.id.cancel);
+        dismiss.setOnClickListener(new View.OnClickListener(){
 
-        return view;
+            public void onClick(View v) {
+                // When button is clicked, call up to owning activity.
+                dismiss();
+            }
+        });
+
+        return v;
     }
+
+
+
 
 }
