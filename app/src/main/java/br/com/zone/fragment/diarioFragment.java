@@ -50,9 +50,9 @@ public class diarioFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
         List<cardObject> exemplo = new ArrayList<>();
-        exemplo.add(new cardObject("Descrição teste", "Títutlo Teste", "15:30"));
-        exemplo.add(new cardObject("Descrição teste", "Títutlo Teste", "15:30"));
-        exemplo.add(new cardObject("Descrição teste", "Títutlo Teste", "15:30"));
+        exemplo.add(new cardObject("Descrição teste", "Título Teste", "15:30"));
+        exemplo.add(new cardObject("Descrição teste", "Título Teste", "15:30"));
+        exemplo.add(new cardObject("Descrição teste", "Título Teste", "15:30"));
 
         recyclerView.setAdapter(new CardAdapter(exemplo, getActivity()));
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);

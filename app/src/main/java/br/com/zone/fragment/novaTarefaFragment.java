@@ -1,9 +1,12 @@
 package br.com.zone.fragment;
 
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,18 +68,29 @@ public class novaTarefaFragment extends DialogFragment {
 
         getActivity().setTitle("Zone");
         //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        Button dismiss = (Button) v.findViewById(R.id.novaTarefa_cancelButton);
-        dismiss.setOnClickListener(new View.OnClickListener(){
 
-            public void onClick(View v) {
-                // When button is clicked, call up to owning activity.
-                dismiss();
-            }
-        });
+
+
 
         return v;
     }
-
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder
+                .setView(inflater.inflate(R.layout.novatarefa_activity, null)).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Clicked 'Okay'
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Clicked 'Cancel'
+                    }
+                });
+        return builder.create();
+    }
 
 
 
