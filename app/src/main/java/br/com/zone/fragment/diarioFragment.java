@@ -8,14 +8,17 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import br.com.zone.R;
 
 import br.com.zone.adapter.SongAdapter;
 import br.com.zone.entities.SongObject;
+import br.com.zone.entities.cardObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,13 +51,15 @@ public class diarioFragment extends Fragment {
             }
         });
 
-        SongAdapter mAdapter = new SongAdapter(getActivity(), getTestData());
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
+        List<cardObject> exemplo = new ArrayList<>();
+        exemplo.add(new cardObject("descrição", "titulo", "horario"));
+        recyclerView.setAdapter(new SongAdapter(exemplo, getActivity()));
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
         return view;
     }
 
-    public List<SongObject> getTestData() {
-        List<SongObject> recentSongs = new ArrayList<SongObject>();
 
-        return recentSongs;
-    }
+
 }
