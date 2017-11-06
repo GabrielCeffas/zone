@@ -8,35 +8,43 @@ import android.view.ViewGroup;
 
 import br.com.zone.R;
 import br.com.zone.entities.SongObject;
+import br.com.zone.entities.cardObject;
 
 import java.util.List;
 
-public class SongAdapter extends RecyclerView.Adapter<SongViewHolder>{
+public class SongAdapter extends RecyclerView.Adapter{
 
+    private List<cardObject> testes;
     private Context context;
-    private List<SongObject> allSongs;
 
-    public SongAdapter(Context context, List<SongObject> allSongs) {
+    public SongAdapter(List<cardObject> teste, Context context) {
+        this.testes = teste;
         this.context = context;
-        this.allSongs = allSongs;
     }
 
     @Override
-    public SongViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.song_list_layout, parent, false);
-        return new SongViewHolder(view);
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context)
+                .inflate(R.layout.song_list_layout, parent, false);
+        SongViewHolder holder = new SongViewHolder(view);
+        return holder;
     }
 
     @Override
-    public void onBindViewHolder(SongViewHolder holder, int position) {
-        SongObject songs = allSongs.get(position);
-        holder.songTitle.setText(songs.getSongTitle());
-        holder.songAuthor.setText(songs.getSongAuthor());
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
+        SongViewHolder holder = (SongViewHolder) viewHolder;
+        cardObject object = testes.get(position);
+        holder.title.setText(object.getTitle());
+        holder.description.setText(object.getDescription());
+        holder.horario.setText(object.getHorario());
+
     }
+
+
 
     @Override
     public int getItemCount() {
-        return allSongs.size();
+        return testes.size();
     }
 
 }

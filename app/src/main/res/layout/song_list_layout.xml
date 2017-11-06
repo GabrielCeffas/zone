@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_64sdp"
+    android:layout_height="@dimen/_80sdp"
     android:padding="@dimen/_16sdp"
     android:orientation="horizontal">
 
@@ -21,35 +21,35 @@
         android:layout_weight="5">
 
         <TextView
-            android:id="@+id/song_title"
+            android:id="@+id/testetitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_8sdp"
             android:layout_marginStart="@dimen/_8sdp"
             android:textColor="@color/colorBlack"
-            android:text="@string/hello"/>
+            android:textSize="@dimen/_15sdp"
+            android:text="teste"/>
 
         <TextView
-            android:id="@+id/song_author"
+            android:id="@+id/testedescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_8sdp"
             android:layout_marginStart="@dimen/_8sdp"
-            android:textSize="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
             android:textColor="@color/colorPrimary"
-            android:text="@string/adele"/>
-
+            android:text="teste"/>
+        <TextView
+            android:id="@+id/horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/colorPrimary"
+            android:text="horario"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/options"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="&#8942;"
-        android:gravity="right"
-        android:textStyle="bold"
-        android:textColor="@color/colorLighter"
-        android:textSize="@dimen/_16sdp"
-        android:layout_weight="1"/>
+
 
 </LinearLayout>
