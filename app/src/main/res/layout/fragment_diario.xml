@@ -6,13 +6,6 @@
     android:background="@color/colorWhite"
     tools:context="br.com.zone.fragment.diarioFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Teste"
-        android:padding="@dimen/_16sdp"
-        android:textSize="@dimen/_13sdp"
-        android:textColor="@color/colorBlack"/>
 
 
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"

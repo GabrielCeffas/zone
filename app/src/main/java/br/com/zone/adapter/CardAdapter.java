@@ -7,17 +7,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import br.com.zone.R;
-import br.com.zone.entities.SongObject;
 import br.com.zone.entities.cardObject;
 
 import java.util.List;
 
-public class SongAdapter extends RecyclerView.Adapter{
+public class CardAdapter extends RecyclerView.Adapter{
 
     private List<cardObject> testes;
     private Context context;
 
-    public SongAdapter(List<cardObject> teste, Context context) {
+    public CardAdapter(List<cardObject> teste, Context context) {
         this.testes = teste;
         this.context = context;
     }
@@ -26,13 +25,13 @@ public class SongAdapter extends RecyclerView.Adapter{
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.song_list_layout, parent, false);
-        SongViewHolder holder = new SongViewHolder(view);
+        CardViewHolder holder = new CardViewHolder(view);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        SongViewHolder holder = (SongViewHolder) viewHolder;
+        CardViewHolder holder = (CardViewHolder) viewHolder;
         cardObject object = testes.get(position);
         holder.title.setText(object.getTitle());
         holder.description.setText(object.getDescription());

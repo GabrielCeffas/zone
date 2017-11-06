@@ -1,7 +1,6 @@
 package br.com.zone.fragment;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.DialogFragment;
@@ -12,12 +11,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import br.com.zone.R;
 
-import br.com.zone.adapter.SongAdapter;
-import br.com.zone.entities.SongObject;
+import br.com.zone.adapter.CardAdapter;
 import br.com.zone.entities.cardObject;
 
 import java.util.ArrayList;
@@ -53,8 +50,11 @@ public class diarioFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
         List<cardObject> exemplo = new ArrayList<>();
-        exemplo.add(new cardObject("descrição", "titulo", "horario"));
-        recyclerView.setAdapter(new SongAdapter(exemplo, getActivity()));
+        exemplo.add(new cardObject("Descrição teste", "Títutlo Teste", "15:30"));
+        exemplo.add(new cardObject("Descrição teste", "Títutlo Teste", "15:30"));
+        exemplo.add(new cardObject("Descrição teste", "Títutlo Teste", "15:30"));
+
+        recyclerView.setAdapter(new CardAdapter(exemplo, getActivity()));
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         return view;

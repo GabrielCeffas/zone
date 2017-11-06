@@ -25,7 +25,7 @@
             android:layout_gravity="bottom|center_horizontal" />
 
         <TextView
-            android:id="@+id/info_text"
+            android:id="@+id/cardTitle"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:hint="Title"
@@ -43,6 +43,7 @@
             android:layout_marginTop="5dp"/>
 
         <TextView
+            android:id="@+id/cardHorario"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginStart="199dp"
@@ -51,7 +52,7 @@
             android:layout_marginEnd="40dp"/>
 
         <TextView
-            android:id="@+id/desc"
+            android:id="@+id/cardDescription"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_gravity="center"
