@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import br.com.zone.R;
 import br.com.zone.fragment.aboutFragment;
+import br.com.zone.fragment.calendarFragment;
 import br.com.zone.fragment.novaTarefaFragment;
 import br.com.zone.fragment.configFragment;
 import br.com.zone.fragment.tabFragment;
@@ -65,9 +66,8 @@ public class MainActivity extends AppCompatActivity{
                 if (id == R.id.nav_inicio) {
                     fragment = new tabFragment();
                 } else if (id == R.id.nav_calendar) {
-                    fragment = new semanalFragment();
+                    fragment = new calendarFragment();
                 } else if (id == R.id.nav_revisao) {
-                    fragment = new novaTarefaFragment();
                 } else if (id == R.id.nav_config) {
                     fragment = new configFragment();
                 }else if (id == R.id.nav_sobre) {
