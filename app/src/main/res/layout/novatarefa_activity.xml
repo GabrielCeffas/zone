@@ -20,19 +20,19 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <ImageButton
-            android:id="@+id/novaTarefa_favButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            app:srcCompat="@android:drawable/btn_star"
+        <EditText
+            android:id="@+id/novaTarefa_nome"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Nome "
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toRightOf="@+id/novaTarefa_nome"
-            android:layout_marginLeft="16dp" />
-
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent" />
         <EditText
             android:id="@+id/novaTarefa_descri"
             android:layout_width="0dp"
@@ -50,37 +50,6 @@
             app:layout_constraintTop_toBottomOf="@+id/novaTarefa_nome"
             app:layout_constraintHorizontal_bias="0.0" />
 
-
-
-        <CheckBox
-            android:id="@+id/novaTarefa_checkBox1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="15dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_AtivText" />
-
-        <CheckBox
-            android:id="@+id/novaTarefa_checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_checkBox1"
-            android:layout_marginStart="8dp" />
-
-        <CheckBox
-            android:id="@+id/novaTarefa_checkBox3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_checkBox2"
-            android:layout_marginStart="8dp" />
 
         <ImageView
             android:id="@+id/novaTarefa_DataImage"
@@ -130,78 +99,6 @@
             app:layout_constraintLeft_toRightOf="@+id/novaTarefa_TimeImage"
             app:layout_constraintTop_toBottomOf="@+id/novaTarefa_descri" />
 
-        <TextView
-            android:id="@+id/novaTarefa_AtivText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Atividades"
-            android:layout_marginLeft="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_time" />
-
-
-
-        <ImageView
-            android:id="@+id/novaTarefa_image"
-            android:layout_width="42dp"
-            android:layout_height="44dp"
-            app:srcCompat="@drawable/ic_action_name"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginStart="8dp" />
-
-        <EditText
-            android:id="@+id/novaTarefa_nome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Nome "
-            app:layout_constraintLeft_toRightOf="@+id/novaTarefa_image"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/novaTarefa_checkboxText1"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintLeft_toRightOf="@+id/novaTarefa_checkBox1"
-            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_AtivText" />
-
-        <EditText
-            android:id="@+id/novaTarefa_checkboxText2"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginLeft="117dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintLeft_toRightOf="@+id/novaTarefa_checkBox2"
-            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_checkboxText1"
-            android:layout_marginStart="16dp" />
-
-        <EditText
-            android:id="@+id/novaTarefa_checkboxText3"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginLeft="-16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-
-            app:layout_constraintLeft_toRightOf="@+id/novaTarefa_checkBox3"
-            app:layout_constraintTop_toBottomOf="@+id/novaTarefa_checkboxText2" />
 
 
 

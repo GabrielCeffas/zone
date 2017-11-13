@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorGray"
+    android:background="#c9e0c9"
     tools:context="br.com.zone.fragment.diarioFragment">
 
 

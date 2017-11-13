@@ -17,7 +17,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="@dimen/_10sdp"
         android:elevation="10dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="#adadad"
         card_view:cardCornerRadius="4dp">
 
 
@@ -39,16 +39,6 @@
             android:hint="Horário:"
             android:textColor="@color/colorBlack"
             android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/cardHorario"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="199dp"
-            android:layout_marginTop="5dp"
-            android:textSize="20dp" />
-
 
 
         <TextView
@@ -93,9 +83,18 @@
             android:layout_marginEnd="0dp"
             android:layout_marginStart="250dp"
             android:layout_marginTop="162dp"
-            android:background="@color/colorAccent"
+            android:background="#D3D3D3"
             android:hint="Editar"
             android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/cardHorario"
+            android:layout_width="116dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="199dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
 
     </android.support.v7.widget.CardView>
 </LinearLayout>

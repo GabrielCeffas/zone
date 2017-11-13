@@ -8,17 +8,23 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.zone.R;
+import br.com.zone.adapter.CardAdapter;
+import br.com.zone.entities.cardObject;
 
 import static android.R.attr.button;
 
-public class novaTarefaFragment extends DialogFragment {
+public class novaTarefaFragment extends DialogFragment{
     int mNum;
 
     public novaTarefaFragment() {
@@ -63,23 +69,14 @@ public class novaTarefaFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.novatarefa_activity, container, false);
-        View tv = v.findViewById(R.id.text);
-
-
         getActivity().setTitle("Zone");
-        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-
-
-
-
         return v;
     }
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder
-                .setView(inflater.inflate(R.layout.novatarefa_activity, null)).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setView(inflater.inflate(R.layout.novatarefa_activity, null)).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Clicked 'Okay'
                     }
