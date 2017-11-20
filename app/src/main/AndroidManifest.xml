@@ -19,10 +19,7 @@
             android:name="br.com.zone.MainActivity"
             android:label="@string/title_activity_music"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="br.com.zone.fragment.novaTarefaActivity"
-            android:label="Zone"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>
