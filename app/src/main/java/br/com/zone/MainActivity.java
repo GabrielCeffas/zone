@@ -1,6 +1,5 @@
 package br.com.zone;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
@@ -21,24 +20,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-
-import br.com.zone.R;
+import br.com.zone.adapter.DatabaseHandler;
+import br.com.zone.entities.cardObject;
 import br.com.zone.fragment.aboutFragment;
-import br.com.zone.fragment.calendarFragment;
-import br.com.zone.fragment.novaTarefaFragment;
 import br.com.zone.fragment.configFragment;
 import br.com.zone.fragment.tabFragment;
-import br.com.zone.fragment.semanalFragment;
-
-import static android.provider.Telephony.Mms.Part.FILENAME;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -59,15 +45,13 @@ public class MainActivity extends AppCompatActivity{
         if (!prefs.getBoolean("firstTime", false)) {
             // <---- run your one time code here
 
-
-
-
             // mark first time has runned.
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("firstTime", true);
             editor.commit();
         }
 
+        DatabaseHandler db = new DatabaseHandler(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -92,8 +76,6 @@ public class MainActivity extends AppCompatActivity{
 
                 if (id == R.id.nav_inicio) {
                     fragment = new tabFragment();
-                } else if (id == R.id.nav_calendar) {
-                    fragment = new calendarFragment();
                 } else if (id == R.id.nav_revisao) {
                 } else if (id == R.id.nav_config) {
                     fragment = new configFragment();

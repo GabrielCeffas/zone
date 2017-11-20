@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:minWidth="850dp"
     android:minHeight="550dp"
-    tools:context="br.com.zone.fragment.novaTarefaFragment">
+    >
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -36,13 +36,14 @@
         <EditText
             android:id="@+id/novaTarefa_descri"
             android:layout_width="0dp"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="1dp"
             android:ems="10"
+            android:maxLength="100"
             android:inputType="textMultiLine"
             android:hint="Descrição"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -95,11 +96,9 @@
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="date"
-            android:hint="Data"
+            android:hint="Horario"
             app:layout_constraintLeft_toRightOf="@+id/novaTarefa_TimeImage"
             app:layout_constraintTop_toBottomOf="@+id/novaTarefa_descri" />
-
-
 
 
     </android.support.constraint.ConstraintLayout>

@@ -3,23 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="220dp"
-    android:padding="6dip"
+    android:layout_height="130dp"
+    android:paddingTop="6dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="1">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="15dp"
         app:cardBackgroundColor="#babfc7"
-        card_view:cardCornerRadius="4dp">
-
+        card_view:cardCornerRadius="3dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/cardTitle"
@@ -43,48 +44,55 @@
 
         <TextView
             android:id="@+id/cardDescription"
-            android:layout_width="362dp"
-            android:layout_height="50dp"
+            android:layout_width="335dp"
+            android:layout_height="65dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:hint="Bla Bla Bla"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:layout_below="@+id/cardTitle"
+            android:layout_centerHorizontal="true" />
 
         <ImageView
             android:id="@+id/novaTarefa_DataImage"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="85dp"
             app:srcCompat="@android:drawable/ic_menu_recent_history" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/cardDuração"
+            android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_marginEnd="190dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="172dp"
+            android:layout_marginTop="89dp"
             android:hint="Duração"
             android:textSize="20dp" />
 
-        <ImageView
-            android:id="@+id/MiniMax"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginStart="315dp"
-            android:layout_marginTop="5dp"
-            app:srcCompat="@drawable/ic_minimax" />
+            <ImageButton
+                android:id="@+id/MiniMaxButton"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginTop="0dp"
+                android:background="#c7ccd6"
+                android:src="@drawable/ic_minimax"
+                android:layout_marginLeft="315dp"
+                android:layout_marginRight="0dp" />
+
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="0dp"
             android:layout_marginStart="250dp"
-            android:layout_marginTop="162dp"
+            android:layout_marginTop="88dp"
             android:background="#c7ccd6"
-            android:hint="Editar"
+            android:hint="Concluido"
             android:textSize="17dp" />
 
         <TextView
@@ -95,6 +103,7 @@
             android:layout_marginStart="199dp"
             android:layout_marginTop="5dp"
             android:textSize="20dp" />
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 </LinearLayout>

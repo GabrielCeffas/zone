@@ -2,34 +2,27 @@ package br.com.zone.fragment;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+
 
 import br.com.zone.R;
 
 import br.com.zone.adapter.CardAdapter;
 import br.com.zone.entities.cardObject;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.provider.Telephony.Mms.Part.FILENAME;
 
 public class diarioFragment extends Fragment {
     List<cardObject> cardList = new ArrayList<>();
@@ -44,37 +37,51 @@ public class diarioFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_diario, container, false);
 
         getActivity().setTitle("Zone");
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
 
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
+        final CardAdapter adapter = new CardAdapter(cardList,this.getContext());
+        recyclerView.setAdapter(adapter);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int mStackLevel = 0;
+
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 Fragment prev = getFragmentManager().findFragmentByTag("dialog");
                 if (prev != null) {
                     ft.remove(prev);
                 }
                 ft.addToBackStack(null);
-                DialogFragment newFragment = novaTarefaFragment.newInstance(mStackLevel);
-                newFragment.show(ft, "Adicionar Tarefa");
+
+                View inflaterView = getActivity().getLayoutInflater().inflate(R.layout.novatarefa_activity, null);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setView(inflaterView);
+
+                final EditText desc = (EditText) inflaterView.findViewById(R.id.novaTarefa_descri);
+                final EditText name = (EditText) inflaterView.findViewById(R.id.novaTarefa_nome);
+                final EditText horario = (EditText) inflaterView.findViewById(R.id.novaTarefa_data);
+                final EditText data = (EditText) inflaterView.findViewById(R.id.novaTarefa_time);
+
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        cardList.add(new cardObject(desc.getText().toString(),name.getText().toString(),horario.getText().toString(),data.getText().toString(),"true", "data", 0));
+
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // Clicked 'Cancel'
+                            }
+                        });
+                builder.show();
 
             }
         });
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
-        cardList.add(new cardObject("Descrição teste", "Título Teste", "15:30"));
-        cardList.add(new cardObject("Descrição teste", "Título Teste", "15:30"));
-        cardList.add(new cardObject("Descrição teste", "Título Teste", "15:30"));
-
-
-        Context ctx = getActivity();
-
-
-
-        recyclerView.setAdapter(new CardAdapter(cardList, getActivity()));
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(layoutManager);
         return view;
     }
 
