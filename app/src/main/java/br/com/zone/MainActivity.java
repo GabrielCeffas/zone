@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
+        final DatabaseHandler db = new DatabaseHandler(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity{
             editor.commit();
         }
 
-        DatabaseHandler db = new DatabaseHandler(this);
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -76,9 +77,7 @@ public class MainActivity extends AppCompatActivity{
 
                 if (id == R.id.nav_inicio) {
                     fragment = new tabFragment();
-                } else if (id == R.id.nav_revisao) {
-                } else if (id == R.id.nav_config) {
-                    fragment = new configFragment();
+
                 }else if (id == R.id.nav_sobre) {
                     fragment = new aboutFragment();
                 }

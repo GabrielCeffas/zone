@@ -10,7 +10,6 @@ import br.com.zone.fragment.diarioFragment;
 
 public class CustomFragmentPageAdapter extends FragmentPagerAdapter{
 
-    private static final String TAG = CustomFragmentPageAdapter.class.getSimpleName();
 
     private static final int FRAGMENT_COUNT = 2;
 

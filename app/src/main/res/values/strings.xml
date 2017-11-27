@@ -22,7 +22,7 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name ="tarefaPrompt">Tipo de Tarefa</string>
     <string name="action_settings">Settings</string>
     <string name="adele_hello">Playing now Hello by Adele</string>
     <string name="music_library">Library</string>
@@ -34,7 +34,10 @@
     <string name="sound_cloud">Sound Cloud</string>
     <string name="local_services">Local Services</string>
     <string name="app_raw_folder">App raw folder</string>
-
+    <string-array name="tipoTarefa">
+        <item>Diario</item>
+        <item>Semanal</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="recently_played_songs">Recently Played Songs</string>

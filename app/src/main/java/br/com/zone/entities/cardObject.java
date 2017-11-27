@@ -8,18 +8,18 @@ public class cardObject {
     private String description;
     private String title;
     private String horario;
-    private String duração;
-    private String isSemanal;
+    private String tipo;
     private String data;
+    private int isShown;
     private int id;
 
-    public cardObject(String description, String title, String horario, String duração, String isSemanal, String data, int id) {
+    public cardObject(String description, String title, String horario, String tipo, String data, int isShown, int id) {
         this.description = description;
         this.title = title;
         this.horario = horario;
-        this.duração = duração;
-        this.isSemanal = isSemanal;
+        this.tipo = tipo;
         this.data = data;
+        this.isShown = isShown;
         this.id = id;
     }
 
@@ -46,20 +46,15 @@ public class cardObject {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-    public String getIsSemanal() {
-        return isSemanal;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setIsSemanal(String isSemanal) {
-        this.isSemanal = isSemanal;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public void setduração(String duração) {
-        this.duração = duração;
-    }
-    public String getduração(){
-        return duração;
-    }
+
     public String getData() {
         return data;
     }
@@ -73,5 +68,12 @@ public class cardObject {
 
     public void setId(int id) {
         this.id = id;
+    }
+    public int getIsShown() {
+        return isShown;
+    }
+
+    public void setIsShown(int isShown) {
+        this.isShown = isShown;
     }
 }

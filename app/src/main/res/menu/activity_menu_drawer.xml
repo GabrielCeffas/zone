@@ -11,18 +11,12 @@
 
 
     <group android:id="@+id/three" android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_revisao"
-            android:icon="@drawable/ic_menu_revis"
-            android:title="Revisao" />
+
     </group>
 
     <item android:title="">
         <menu>
-            <item
-                android:id="@+id/nav_config"
-                android:icon="@drawable/ic_menu_config"
-                android:title="Config" />
+
             <item
                 android:id="@+id/nav_sobre"
                 android:icon="@drawable/ic_menu_about"

@@ -19,7 +19,6 @@ import br.com.zone.adapter.CustomFragmentPageAdapter;
 
 public class tabFragment extends Fragment {
 
-    private static final String TAG = tabFragment.class.getSimpleName();
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
