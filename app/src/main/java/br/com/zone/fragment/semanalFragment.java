@@ -11,7 +11,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,7 +19,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import java.util.ArrayList;
@@ -29,7 +27,6 @@ import java.util.List;
 
 import br.com.zone.R;
 import br.com.zone.adapter.CardAdapter;
-import br.com.zone.adapter.CardSemanalAdapter;
 import br.com.zone.adapter.DatabaseHandler;
 import br.com.zone.entities.cardObject;
 
